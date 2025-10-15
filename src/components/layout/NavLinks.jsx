@@ -13,9 +13,8 @@ export default function NavLinks({
                 <li key={item.path}>
                     <Link
                         to={item.path}
-                        className={`
-                            flex items-center gap-2 ${
-                                isActive && isActive(item.path)
+                        className={`flex items-center gap-2 ${
+                            isActive?.(item.path)
                                 ? "active bg-primary text-primary-content"
                                 : "hover:bg-base-200"
                         }`}
